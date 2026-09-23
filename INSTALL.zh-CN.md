@@ -21,7 +21,7 @@ npx --yes github:jarvis-xy/vibe-coding-sdd init
 安装器会让你选择：
 
 - Coding Agent：Antigravity / Claude Code / Codex / Kiro / Generic
-- Scope：当前项目 / 全局
+- Scope：**全局（默认/推荐）** / 当前项目（高级可选）
 - Rule Language：English / 中文
 
 ### 直接安装示例
@@ -32,16 +32,16 @@ Antigravity，全局安装，中文规则：
 npx --yes github:jarvis-xy/vibe-coding-sdd init --agent antigravity --scope global --lang zh-CN --yes
 ```
 
-Claude Code，安装到当前项目：
+Claude Code，全局安装：
 
 ```bash
-npx --yes github:jarvis-xy/vibe-coding-sdd init --agent claude-code --scope project --lang zh-CN --yes
+npx --yes github:jarvis-xy/vibe-coding-sdd init --agent claude-code --scope global --lang zh-CN --yes
 ```
 
-Codex，安装到当前项目：
+Codex，全局安装：
 
 ```bash
-npx --yes github:jarvis-xy/vibe-coding-sdd init --agent codex --scope project --lang zh-CN --yes
+npx --yes github:jarvis-xy/vibe-coding-sdd init --agent codex --scope global --lang zh-CN --yes
 ```
 
 Kiro，全局安装：
@@ -49,6 +49,15 @@ Kiro，全局安装：
 ```bash
 npx --yes github:jarvis-xy/vibe-coding-sdd init --agent kiro --scope global --lang zh-CN --yes
 ```
+
+## 推荐安装方式
+
+这套仓库的核心是“开发方法论”，因此 **Rules / Skills 默认应该全局安装**：
+
+> Global = 我怎么开发  
+> Project = 这个产品是什么
+
+Project Scope 只用于某个仓库需要自己的覆盖规则时。使用 Project Scope 前请先 `cd` 到真实项目目录。安装器会拒绝把 Home 目录 `~` 当成 Project。
 
 ## 安全策略
 

@@ -185,7 +185,7 @@ If the agent supports reusable skills, commands, workflows, or prompt modules, i
 - code-review
 - browser-qa
 
-Use the native supported format and make them available globally when the user is configuring a global environment; otherwise install them at project scope.
+Install the reusable SDD rules/skills globally by default so all projects share the same development method. Use project scope only when the user explicitly wants repository-local overrides. Product facts, architecture, stack, business rules, and active specs remain project-local context.
 
 ## Avoid process bureaucracy
 

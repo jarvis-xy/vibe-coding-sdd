@@ -192,7 +192,7 @@ Code Written、Build Passed、Tests Passed 或 AI Says Done，都不能单独代
 - code-review
 - browser-qa
 
-如果用户配置的是 Global Environment，则使用全局 Scope；否则使用 Project Scope。
+这套方法论默认安装到 Global Scope，使所有项目共享同一套 SDD Rules / Skills。只有用户明确要求某个仓库使用局部覆盖时，才使用 Project Scope。Project Context（产品、架构、技术栈、业务规则、Specs）仍然只属于具体项目。
 
 ## 避免流程官僚化
 

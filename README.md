@@ -2,7 +2,7 @@
 
 **A tool-agnostic, Spec-Driven Development workflow for AI coding agents.**
 
-[简体中文](README.zh-CN.md) · [Install](INSTALL.md) · [Universal Bootstrap Prompt](UNIVERSAL_BOOTSTRAP_PROMPT.md)
+[简体中文](README.zh-CN.md) · [Install](INSTALL.md) · [Release](RELEASE.md) · [Universal Bootstrap Prompt](UNIVERSAL_BOOTSTRAP_PROMPT.md)
 
 Vibe Coding SDD turns ad-hoc prompting into a repeatable engineering process:
 
@@ -13,6 +13,14 @@ It is designed for builders who use AI to ship real software and want quality to
 ## One-command install
 
 Requires Node.js 18+.
+
+After the npm package is published:
+
+```bash
+npx vibe-coding-sdd init
+```
+
+Available directly from GitHub today:
 
 ```bash
 npx --yes github:jarvis-xy/vibe-coding-sdd init
@@ -36,7 +44,7 @@ npx --yes github:jarvis-xy/vibe-coding-sdd init --agent codex --scope project --
 npx --yes github:jarvis-xy/vibe-coding-sdd init --agent kiro --scope global --lang en --yes
 ```
 
-See [INSTALL.md](INSTALL.md) for safety behavior, `--dry-run`, `--force`, and current tool mappings.
+See [INSTALL.md](INSTALL.md) for safety behavior, `--dry-run`, `--force`, and current tool mappings. See [RELEASE.md](RELEASE.md) for npm publishing.
 
 ## Why this exists
 

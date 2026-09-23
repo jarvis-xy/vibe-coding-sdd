@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/vibe-coding-sdd-banner.jpg" alt="Vibe Coding SDD — Spec-Driven Workflow for AI Coding Agents" width="100%" />
+<img src="https://raw.githubusercontent.com/jarvis-xy/vibe-coding-sdd/main/assets/vibe-coding-sdd-banner.jpg" alt="Vibe Coding SDD — Spec-Driven Workflow for AI Coding Agents" width="100%" />
 
 </div>
 

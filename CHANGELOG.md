@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.1 — 2026-09-23
+
+- Fixed the installer/docs scope mismatch: the SDD methodology now installs **globally by default**.
+- Updated Antigravity, Claude Code, Codex, Kiro, and Generic primary examples to use global scope.
+- Kept project scope as an explicit advanced option for repository-local overrides/context.
+- Added a safety guard that refuses to treat the user's home directory as a project target.
+- Added regression tests for the global-default behavior.
+
 ## 0.3.0 — 2026-09-23
 
 - Prepared the package for npm publication as `vibe-coding-sdd`.

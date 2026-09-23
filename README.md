@@ -17,7 +17,7 @@
 <br/>
 
 [![STAR ON GITHUB](https://img.shields.io/github/stars/jarvis-xy/vibe-coding-sdd?style=for-the-badge&logo=github&label=STAR%20ON%20GITHUB)](https://github.com/jarvis-xy/vibe-coding-sdd/stargazers)
-[![VERSION](https://img.shields.io/badge/VERSION-v0.3.0-ff7a35?style=for-the-badge)](CHANGELOG.md)
+[![VERSION](https://img.shields.io/badge/VERSION-v0.3.1-ff7a35?style=for-the-badge)](CHANGELOG.md)
 [![CI](https://img.shields.io/github/actions/workflow/status/jarvis-xy/vibe-coding-sdd/installer-test.yml?branch=main&style=for-the-badge&label=CI)](https://github.com/jarvis-xy/vibe-coding-sdd/actions)
 
 [![NODE](https://img.shields.io/badge/NODE-%3E%3D18-5FA04E?style=for-the-badge&logo=node.js&logoColor=white)](package.json)
@@ -211,11 +211,9 @@ Reproduce
 npx --yes github:jarvis-xy/vibe-coding-sdd init
 ```
 
-安装器会让你选择：
+安装器会让你选择 Coding Agent 和语言，**开发方法论默认安装到 Global**。
 
-1. 使用哪个 Coding Agent；
-2. 安装到当前 Project 还是 Global；
-3. 使用中文还是英文 Rules。
+> 推荐：SDD Rules / Skills 全局安装；具体项目的产品、架构、数据库、业务规则继续保留在 Project Context。
 
 如果之后 npm 包完成正式发布，命令会进一步缩短为：
 
@@ -237,22 +235,22 @@ npx --yes github:jarvis-xy/vibe-coding-sdd init \
   --yes
 ```
 
-### Claude Code · 当前项目 · 中文
+### Claude Code · 全局 · 中文
 
 ```bash
 npx --yes github:jarvis-xy/vibe-coding-sdd init \
   --agent claude-code \
-  --scope project \
+  --scope global \
   --lang zh-CN \
   --yes
 ```
 
-### Codex · 当前项目 · 中文
+### Codex · 全局 · 中文
 
 ```bash
 npx --yes github:jarvis-xy/vibe-coding-sdd init \
   --agent codex \
-  --scope project \
+  --scope global \
   --lang zh-CN \
   --yes
 ```
@@ -266,6 +264,17 @@ npx --yes github:jarvis-xy/vibe-coding-sdd init \
   --lang zh-CN \
   --yes
 ```
+
+### Project Scope（可选）
+
+只有当你明确需要某个仓库自己的 Rules / Skills 覆盖时才使用：
+
+```bash
+cd /path/to/your/project
+npx --yes github:jarvis-xy/vibe-coding-sdd init --agent codex --scope project --lang zh-CN --yes
+```
+
+> 不要在 `~` Home 目录下使用 `--scope project`。安装器现在会直接拒绝这种误操作。
 
 ### 安全选项
 

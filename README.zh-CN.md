@@ -2,7 +2,7 @@
 
 **一套与模型、IDE、Coding Agent 厂商无关的 Spec-Driven Development 标准开发工作流。**
 
-[English](README.md) · [安装说明](INSTALL.zh-CN.md) · [中文初始化提示词](UNIVERSAL_BOOTSTRAP_PROMPT.zh-CN.md)
+[English](README.md) · [安装说明](INSTALL.zh-CN.md) · [发布说明](RELEASE.zh-CN.md) · [中文初始化提示词](UNIVERSAL_BOOTSTRAP_PROMPT.zh-CN.md)
 
 它把“想到一句就让 AI 改一句”的 Vibe Coding，升级成一套可重复执行、可测试、可 Review、可回滚的工程流程：
 
@@ -13,6 +13,14 @@
 ## 一条命令安装
 
 需要 Node.js 18+。
+
+npm 包正式发布后可以直接：
+
+```bash
+npx vibe-coding-sdd init
+```
+
+现在已经可以直接从 GitHub 安装：
 
 ```bash
 npx --yes github:jarvis-xy/vibe-coding-sdd init
@@ -40,7 +48,7 @@ npx --yes github:jarvis-xy/vibe-coding-sdd init --agent codex --scope project --
 npx --yes github:jarvis-xy/vibe-coding-sdd init --agent kiro --scope global --lang zh-CN --yes
 ```
 
-完整安全策略、`--dry-run`、`--force` 和各工具路径见 [INSTALL.zh-CN.md](INSTALL.zh-CN.md)。
+完整安全策略、`--dry-run`、`--force` 和各工具路径见 [INSTALL.zh-CN.md](INSTALL.zh-CN.md)。npm 发布见 [RELEASE.zh-CN.md](RELEASE.zh-CN.md)。
 
 ## 为什么需要它
 

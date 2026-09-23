@@ -1,0 +1,9 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local experiments
+.local/
+tmp/

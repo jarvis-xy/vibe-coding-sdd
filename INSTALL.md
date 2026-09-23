@@ -6,7 +6,13 @@
 
 Requires Node.js 18+.
 
-Interactive installer:
+After the npm package is published:
+
+```bash
+npx vibe-coding-sdd init
+```
+
+Until then, install directly from GitHub:
 
 ```bash
 npx --yes github:jarvis-xy/vibe-coding-sdd init
@@ -81,6 +87,10 @@ npx --yes github:jarvis-xy/vibe-coding-sdd doctor
 | Generic | `.vibe-coding-sdd/` | `.vibe-coding-sdd/skills/` | `~/.vibe-coding-sdd/` | `~/.vibe-coding-sdd/skills/` |
 
 Because coding-agent configuration evolves, adapter mappings should remain small and versioned. The methodology under `core/` is the stable source of truth.
+
+## npm publishing
+
+See [RELEASE.md](RELEASE.md) for the one-time first publish and Trusted Publishing setup.
 
 ## Manual installation
 

@@ -32,7 +32,7 @@ Available directly from GitHub today:
 npx --yes github:jarvis-xy/vibe-coding-sdd init
 ```
 
-Choose your coding agent, install scope, and language interactively.
+Choose your coding agent and language interactively. **The reusable SDD methodology installs globally by default.** Project scope remains available as an explicit advanced option for repository-local overrides/context.
 
 Examples:
 
@@ -40,11 +40,11 @@ Examples:
 # Antigravity · global · Chinese rules
 npx --yes github:jarvis-xy/vibe-coding-sdd init --agent antigravity --scope global --lang zh-CN --yes
 
-# Claude Code · current project
-npx --yes github:jarvis-xy/vibe-coding-sdd init --agent claude-code --scope project --lang en --yes
+# Claude Code · global
+npx --yes github:jarvis-xy/vibe-coding-sdd init --agent claude-code --scope global --lang en --yes
 
-# Codex · current project
-npx --yes github:jarvis-xy/vibe-coding-sdd init --agent codex --scope project --lang en --yes
+# Codex · global
+npx --yes github:jarvis-xy/vibe-coding-sdd init --agent codex --scope global --lang en --yes
 
 # Kiro · global
 npx --yes github:jarvis-xy/vibe-coding-sdd init --agent kiro --scope global --lang en --yes

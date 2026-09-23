@@ -10,13 +10,13 @@ const PKG_ROOT = path.resolve(__dirname, '..');
 const VERSION = require(path.join(PKG_ROOT, 'package.json')).version;
 const AGENTS = ['antigravity', 'claude-code', 'codex', 'kiro', 'generic'];
 const LANGS = ['en', 'zh-CN'];
-const SCOPES = ['project', 'global'];
+const SCOPES = ['global', 'project'];
 const SKILLS = ['feature', 'bugfix', 'small-change', 'code-review', 'browser-qa'];
 const START = '<!-- vibe-coding-sdd:start -->';
 const END = '<!-- vibe-coding-sdd:end -->';
 
 function printHelp() {
-  console.log(`\nVibe Coding SDD v${VERSION}\n\nUsage:\n  vibe-coding-sdd init [options]\n  vibe-coding-sdd doctor [options]\n\nOptions:\n  --agent <name>    antigravity | claude-code | codex | kiro | generic\n  --scope <scope>   project | global\n  --lang <lang>     en | zh-CN\n  --target <path>   project target directory (default: current directory)\n  --yes             accept defaults / non-interactive\n  --force           overwrite conflicting Vibe Coding SDD skill files (backs them up first)\n  --dry-run         show what would change without writing\n  -h, --help        show help\n\nExamples:\n  npx --yes github:jarvis-xy/vibe-coding-sdd init\n  npx --yes github:jarvis-xy/vibe-coding-sdd init --agent antigravity --scope global --lang zh-CN --yes\n`);
+  console.log(`\nVibe Coding SDD v${VERSION}\n\nUsage:\n  vibe-coding-sdd init [options]\n  vibe-coding-sdd doctor [options]\n\nOptions:\n  --agent <name>    antigravity | claude-code | codex | kiro | generic\n  --scope <scope>   global | project (default: global)\n  --lang <lang>     en | zh-CN\n  --target <path>   project target directory (only for --scope project; default: current directory)\n  --yes             accept defaults / non-interactive\n  --force           overwrite conflicting Vibe Coding SDD skill files (backs them up first)\n  --dry-run         show what would change without writing\n  -h, --help        show help\n\nExamples:\n  npx --yes github:jarvis-xy/vibe-coding-sdd init\n  npx --yes github:jarvis-xy/vibe-coding-sdd init --agent antigravity --scope global --lang zh-CN --yes\n`);
 }
 
 function parseArgs(argv) {
@@ -173,12 +173,12 @@ async function normalizeOptions(opts) {
   if (opts.lang && !LANGS.includes(opts.lang)) throw new Error(`Invalid --lang: ${opts.lang}`);
 
   if (opts.yes) {
-    return { ...opts, agent: opts.agent || 'generic', scope: opts.scope || 'project', lang: opts.lang || 'en' };
+    return { ...opts, agent: opts.agent || 'generic', scope: opts.scope || 'global', lang: opts.lang || 'en' };
   }
   const rl = readline.createInterface({ input: stdin, output: stdout });
   try {
     const agent = opts.agent || await choose(rl, 'Which coding agent?', AGENTS, 0);
-    const scope = opts.scope || await choose(rl, 'Install scope?', SCOPES, 0);
+    const scope = opts.scope || await choose(rl, 'Install scope? (global is recommended for the SDD methodology)', SCOPES, 0);
     const lang = opts.lang || await choose(rl, 'Rule language?', LANGS, 0);
     return { ...opts, agent, scope, lang };
   } finally {
@@ -218,6 +218,9 @@ async function main() {
     if (raw.command !== 'init') throw new Error(`Unknown command: ${raw.command}`);
 
     const opts = await normalizeOptions(raw);
+    if (opts.scope === 'project' && path.resolve(opts.target) === path.resolve(os.homedir())) {
+      throw new Error('Refusing to install project scope into your home directory. Use --scope global, or cd into a real project / pass --target <project-path>.');
+    }
     const log = [];
     if (opts.scope === 'global') installGlobal(opts.agent, opts.lang, opts, log);
     else installProject(opts.agent, path.resolve(opts.target), opts.lang, opts, log);

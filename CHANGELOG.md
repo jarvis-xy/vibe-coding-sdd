@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 — 2026-09-23
+
+- Prepared the package for npm publication as `vibe-coding-sdd`.
+- Added npm-safe package metadata, public publish configuration, and pre-publish tests.
+- Added GitHub Actions publishing workflow for npm Trusted Publishing (OIDC).
+- Added release documentation for the one-time first publish and future automated releases.
+- Documented the short npm install command: `npx vibe-coding-sdd init`.
+
 ## 0.2.0 — 2026-09-23
 
 - Added one-command installer runnable directly from GitHub with `npx`.

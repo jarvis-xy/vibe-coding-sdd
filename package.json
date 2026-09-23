@@ -1,0 +1,47 @@
+{
+  "name": "vibe-coding-sdd",
+  "version": "0.2.0",
+  "description": "Tool-agnostic Spec-Driven Development workflow for AI coding agents.",
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": {
+    "vibe-coding-sdd": "bin/vibe-coding-sdd.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node test/installer.test.js"
+  },
+  "files": [
+    "bin/",
+    "core/",
+    "skills/",
+    "templates/",
+    "adapters/",
+    "UNIVERSAL_BOOTSTRAP_PROMPT.md",
+    "UNIVERSAL_BOOTSTRAP_PROMPT.zh-CN.md",
+    "INSTALL.md",
+    "INSTALL.zh-CN.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarvis-xy/vibe-coding-sdd.git"
+  },
+  "homepage": "https://github.com/jarvis-xy/vibe-coding-sdd#readme",
+  "bugs": {
+    "url": "https://github.com/jarvis-xy/vibe-coding-sdd/issues"
+  },
+  "keywords": [
+    "vibe-coding",
+    "sdd",
+    "spec-driven-development",
+    "ai-coding",
+    "agent-skills",
+    "codex",
+    "claude-code",
+    "antigravity",
+    "kiro"
+  ]
+}

@@ -1,19 +1,49 @@
 # Vibe Coding SDD
 
-> A tool-agnostic, spec-driven workflow for building software with AI coding agents.
+**A tool-agnostic, Spec-Driven Development workflow for AI coding agents.**
+
+[简体中文](README.zh-CN.md) · [Install](INSTALL.md) · [Universal Bootstrap Prompt](UNIVERSAL_BOOTSTRAP_PROMPT.md)
 
 Vibe Coding SDD turns ad-hoc prompting into a repeatable engineering process:
 
 **Classify → Specify → Plan → Build → Test → Review → Verify → Converge**
 
-It is designed for people who use AI to build real products but do not want quality to depend on a single prompt, model, IDE, or agent.
+It is designed for builders who use AI to ship real software and want quality to depend on a process—not on one lucky prompt, one model, or one IDE.
+
+## One-command install
+
+Requires Node.js 18+.
+
+```bash
+npx --yes github:jarvis-xy/vibe-coding-sdd init
+```
+
+Choose your coding agent, install scope, and language interactively.
+
+Examples:
+
+```bash
+# Antigravity · global · Chinese rules
+npx --yes github:jarvis-xy/vibe-coding-sdd init --agent antigravity --scope global --lang zh-CN --yes
+
+# Claude Code · current project
+npx --yes github:jarvis-xy/vibe-coding-sdd init --agent claude-code --scope project --lang en --yes
+
+# Codex · current project
+npx --yes github:jarvis-xy/vibe-coding-sdd init --agent codex --scope project --lang en --yes
+
+# Kiro · global
+npx --yes github:jarvis-xy/vibe-coding-sdd init --agent kiro --scope global --lang en --yes
+```
+
+See [INSTALL.md](INSTALL.md) for safety behavior, `--dry-run`, `--force`, and current tool mappings.
 
 ## Why this exists
 
 Vibe coding is fast, but unstructured AI coding often creates predictable problems:
 
 - the agent starts coding before the requirement is clear;
-- large changes are made without impact analysis;
+- large changes happen without impact analysis;
 - bugs are patched at the symptom instead of the root cause;
 - the same agent writes and approves its own work;
 - tests are skipped or claimed without being run;
@@ -32,8 +62,6 @@ This repository provides a lightweight operating system for AI-assisted software
 | **TDD / Testing** | Proves important behavior works instead of trusting the implementation. |
 | **DDD** | Optional architectural technique for organizing complex systems around business domains. |
 
-The default workflow is intentionally simpler than heavyweight enterprise processes.
-
 ## Three task lanes
 
 ### Small Change
@@ -46,7 +74,7 @@ For copy, styling, spacing, trivial UI changes, and clearly low-risk configurati
 
 For meaningful new behavior or changes to business logic, APIs, databases, authentication, payments, integrations, or architecture.
 
-`Understand → Spec → Clarify → Impact → Design → Tasks → Implement → Test → Review → QA → Converge`
+`Understand → Spec → Clarify → Impact → Design → Tasks → Implement → Test → Review → Browser QA → Converge`
 
 ### Bug
 
@@ -54,18 +82,16 @@ For broken existing behavior.
 
 `Reproduce → Expected vs Actual → Evidence → Root Cause → Impact → Fix Plan → Fix → Regression Test → Verify`
 
-## Quick start
+## Global vs Project
 
-The fastest way to adopt the workflow is to copy [`UNIVERSAL_BOOTSTRAP_PROMPT.md`](UNIVERSAL_BOOTSTRAP_PROMPT.md) into your AI coding agent and ask it to configure the workflow using the agent's native rule/skill system.
+The core boundary is simple:
 
-If you prefer manual setup:
+> **Global = how you develop.**  
+> **Project = what this product is.**
 
-1. Add [`core/GLOBAL_RULES.md`](core/GLOBAL_RULES.md) to your agent's persistent project/global instructions.
-2. Install the reusable skills under [`skills/`](skills/).
-3. Copy the relevant project context templates from [`templates/project-context/`](templates/project-context/).
-4. Use [`templates/specs/`](templates/specs/) for medium/high-risk work.
+Global rules should describe process, safety, testing, and review. Project context should contain the real product stack, architecture, database, APIs, business rules, UI rules, deployment, and active feature specs.
 
-## Recommended project structure
+Recommended project structure:
 
 ```text
 project/
@@ -80,14 +106,9 @@ project/
 └── ...your source code
 ```
 
-**Global = how you develop.**  
-**Project = what this product is.**
-
-Do not hard-code project-specific technologies or business rules into global instructions.
-
 ## Definition of Done
 
-Code written is not Done. A build passing is not automatically Done. An AI saying "done" is not Done.
+Code written is not Done. A build passing is not automatically Done. An AI saying “done” is not Done.
 
 A meaningful task is Done when these agree:
 
@@ -103,16 +124,37 @@ Observed behavior
 
 For high-risk or user-facing work, Code Review and Browser QA should also pass.
 
-## Tool adapters
+## Repository layout
 
-The core method is model- and vendor-independent. Adapter notes are included for:
+```text
+core/                         Stable methodology
+skills/                       Reusable Agent Skills
+adapters/                     Tool-specific mappings
+  antigravity/
+  claude-code/
+  codex/
+  kiro/
+templates/
+  project-context/
+  specs/
+UNIVERSAL_BOOTSTRAP_PROMPT.md
+UNIVERSAL_BOOTSTRAP_PROMPT.zh-CN.md
+bin/vibe-coding-sdd.js        One-command installer
+```
+
+## Supported adapters
 
 - Antigravity
 - Claude Code
 - Codex
 - Kiro
+- Generic / other Agent Skills-compatible tools
 
-See [`adapters/`](adapters/). Treat adapter-specific paths and commands as convenience guidance; the core files remain the source of truth.
+The core method is vendor-independent. Adapter paths are intentionally thin so a tool can evolve without rewriting the methodology.
+
+## Manual bootstrap
+
+If you do not want to run code, paste [UNIVERSAL_BOOTSTRAP_PROMPT.md](UNIVERSAL_BOOTSTRAP_PROMPT.md) into your coding agent. Chinese users can use [UNIVERSAL_BOOTSTRAP_PROMPT.zh-CN.md](UNIVERSAL_BOOTSTRAP_PROMPT.zh-CN.md).
 
 ## Philosophy
 
@@ -120,9 +162,13 @@ See [`adapters/`](adapters/). Treat adapter-specific paths and commands as conve
 - Specs define **what**; designs define **how**.
 - Important behavior should be observable and testable.
 - Bugs require evidence and root-cause analysis before patching.
-- One agent may write; another context or agent should review when risk is meaningful.
+- Review should try to disprove completeness, not merely approve the writer’s work.
 - Browser-facing work should be tested in the browser when practical.
 - Never claim a test or verification was performed when it was not.
+
+## Contributing
+
+Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 

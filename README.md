@@ -6,7 +6,7 @@
 
 # Vibe Coding SDD
 
-### 给 Claude Code、Codex、Antigravity、Kiro 和其他 AI Coding Agent 一套统一的 SDD 开发流程
+### 给 Claude Code、Codex、Antigravity和其他 AI Coding Agent 一套统一的 SDD 开发流程
 
 **先定义，再开发；先验证，再完成。**
 

@@ -6,7 +6,13 @@
 
 需要 Node.js 18+。
 
-交互式安装：
+npm 包正式发布后：
+
+```bash
+npx vibe-coding-sdd init
+```
+
+在正式发布到 npm 之前，可以直接从 GitHub 安装：
 
 ```bash
 npx --yes github:jarvis-xy/vibe-coding-sdd init
@@ -81,6 +87,10 @@ npx --yes github:jarvis-xy/vibe-coding-sdd doctor
 | Generic | `.vibe-coding-sdd/` | `.vibe-coding-sdd/skills/` | `~/.vibe-coding-sdd/` | `~/.vibe-coding-sdd/skills/` |
 
 Coding Agent 的配置路径会变化，因此 Adapter 层应保持轻量；真正稳定的 Source of Truth 是 `core/` 里的方法论。
+
+## npm 发布
+
+第一次 npm 发布和 Trusted Publishing 设置见 [RELEASE.zh-CN.md](RELEASE.zh-CN.md)。
 
 ## 手动安装
 

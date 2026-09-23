@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="600" viewBox="0 0 1800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Vibe Coding SDD</title>
+  <desc id="desc">Spec-Driven Workflow for AI Coding Agents</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#02060c"/>
+      <stop offset="0.52" stop-color="#07111d"/>
+      <stop offset="1" stop-color="#080706"/>
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="30%" cy="0%" r="70%">
+      <stop offset="0" stop-color="#1f9cff" stop-opacity=".55"/>
+      <stop offset=".45" stop-color="#146bb8" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldGlow" cx="70%" cy="0%" r="70%">
+      <stop offset="0" stop-color="#ffb64d" stop-opacity=".48"/>
+      <stop offset=".45" stop-color="#b86b14" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flow" x1="0" x2="1">
+      <stop offset="0" stop-color="#38a7ff"/>
+      <stop offset=".55" stop-color="#35e2c1"/>
+      <stop offset="1" stop-color="#ffc35a"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="1800" height="600" fill="url(#bg)"/>
+  <rect width="1800" height="600" fill="url(#blueGlow)"/>
+  <rect width="1800" height="600" fill="url(#goldGlow)"/>
+
+  <g opacity=".8">
+    <path d="M120 55 C430 20 610 20 900 120" fill="none" stroke="#2a98ff" stroke-opacity=".45" stroke-width="2"/>
+    <path d="M1680 55 C1370 20 1190 20 900 120" fill="none" stroke="#ffb34a" stroke-opacity=".42" stroke-width="2"/>
+    <path d="M220 18 C500 55 690 70 900 145" fill="none" stroke="#77c7ff" stroke-opacity=".18"/>
+    <path d="M1580 18 C1300 55 1110 70 900 145" fill="none" stroke="#ffd28d" stroke-opacity=".18"/>
+  </g>
+
+  <g opacity=".7" filter="url(#blur)">
+    <ellipse cx="520" cy="55" rx="210" ry="45" fill="#0c7eea" fill-opacity=".34"/>
+    <ellipse cx="1280" cy="55" rx="210" ry="45" fill="#d17b1f" fill-opacity=".28"/>
+  </g>
+
+  <g fill="#fff" opacity=".7">
+    <circle cx="160" cy="80" r="2"/><circle cx="245" cy="55" r="1.5"/><circle cx="340" cy="95" r="2"/>
+    <circle cx="1450" cy="78" r="2"/><circle cx="1545" cy="48" r="1.6"/><circle cx="1655" cy="96" r="2"/>
+    <circle cx="690" cy="62" r="1.3"/><circle cx="1120" cy="56" r="1.4"/>
+  </g>
+
+  <text x="900" y="235" fill="#ffffff" text-anchor="middle"
+        font-family="Inter,Segoe UI,Arial,sans-serif" font-size="96" font-weight="800" letter-spacing="-2">
+    Vibe Coding SDD
+  </text>
+  <text x="900" y="292" fill="#a9cfff" text-anchor="middle"
+        font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="500" letter-spacing="6">
+    SPEC-DRIVEN WORKFLOW FOR AI CODING AGENTS
+  </text>
+  <text x="900" y="338" fill="#b4bdc9" text-anchor="middle"
+        font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="500" letter-spacing="1.8">
+    Build with AI. Verify like an engineer.
+  </text>
+
+  <path d="M370 470 C520 470 560 470 650 470 S830 470 900 470 S1080 470 1160 470 S1340 470 1430 470"
+        fill="none" stroke="url(#flow)" stroke-width="3" opacity=".8" filter="url(#glow)"/>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" text-anchor="middle">
+    <g transform="translate(330 390)">
+      <rect width="230" height="150" rx="22" fill="#081522" stroke="#3da9ff" stroke-opacity=".7" stroke-width="2"/>
+      <rect width="230" height="150" rx="22" fill="#1587df" fill-opacity=".07"/>
+      <path d="M93 36 h30 l18 18 v42 h-48z M123 36v20h18" fill="none" stroke="#76c5ff" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M102 69h25 M102 81h25" stroke="#76c5ff" stroke-width="4" stroke-linecap="round"/>
+      <text x="115" y="127" fill="#c4e5ff" font-size="24" font-weight="700" letter-spacing="5">SPEC</text>
+    </g>
+
+    <g transform="translate(610 390)">
+      <rect width="230" height="150" rx="22" fill="#081522" stroke="#3da9ff" stroke-opacity=".62" stroke-width="2"/>
+      <rect width="230" height="150" rx="22" fill="#1587df" fill-opacity=".055"/>
+      <path d="M92 56l-20 18 20 18 M138 56l20 18-20 18 M123 48l-16 52" fill="none" stroke="#76c5ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="115" y="127" fill="#c4e5ff" font-size="24" font-weight="700" letter-spacing="5">BUILD</text>
+    </g>
+
+    <g transform="translate(960 390)">
+      <rect width="230" height="150" rx="22" fill="#071b18" stroke="#35dfb9" stroke-opacity=".7" stroke-width="2"/>
+      <rect width="230" height="150" rx="22" fill="#21c8a1" fill-opacity=".06"/>
+      <circle cx="115" cy="71" r="29" fill="none" stroke="#5df1cf" stroke-width="5"/>
+      <path d="M101 71l10 10 20-24" fill="none" stroke="#5df1cf" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="115" y="127" fill="#bff9eb" font-size="24" font-weight="700" letter-spacing="5">VERIFY</text>
+    </g>
+
+    <g transform="translate(1240 390)">
+      <rect width="230" height="150" rx="22" fill="#1b140b" stroke="#f2b55f" stroke-opacity=".72" stroke-width="2"/>
+      <rect width="230" height="150" rx="22" fill="#e39b38" fill-opacity=".06"/>
+      <path d="M115 42l29 16v33l-29 16-29-16V58z M86 58l29 17 29-17 M115 75v32" fill="none" stroke="#ffd28c" stroke-width="4" stroke-linejoin="round"/>
+      <text x="115" y="127" fill="#ffe1b0" font-size="24" font-weight="700" letter-spacing="5">SHIP</text>
+    </g>
+  </g>
+
+  <g fill="#fff" filter="url(#glow)">
+    <circle cx="575" cy="470" r="5" fill="#45b4ff"/>
+    <circle cx="900" cy="470" r="5" fill="#43e1c5"/>
+    <circle cx="1225" cy="470" r="5" fill="#ffd065"/>
+  </g>
+</svg>

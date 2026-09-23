@@ -2,19 +2,40 @@
 
 # 🧭 Vibe Coding SDD
 
-### 一套与模型、IDE、Coding Agent 厂商无关的 Spec-Driven Development 标准开发工作流
+### 给 Claude Code、Codex、Antigravity、Kiro 和其他 AI Coding Agent 一套统一的 SDD 开发流程
 
-**把“想到一句就让 AI 改一句”的 Vibe Coding，升级成可重复、可测试、可 Review、可验收的工程流程。**
+**先定义，再开发；先验证，再完成。**
+
+把“想到一句就让 AI 改一句”的 Vibe Coding，升级成可重复、可测试、可 Review、可验收、可回滚的工程流程。
 
 [English](README.en.md) · [安装说明](INSTALL.zh-CN.md) · [发布说明](RELEASE.zh-CN.md) · [初始化提示词](UNIVERSAL_BOOTSTRAP_PROMPT.zh-CN.md)
 
 <br/>
 
-[![Version](https://img.shields.io/badge/version-v0.3.0-0969da)](CHANGELOG.md)
-[![Stars](https://img.shields.io/github/stars/jarvis-xy/vibe-coding-sdd?style=flat&logo=github)](https://github.com/jarvis-xy/vibe-coding-sdd/stargazers)
-[![CI](https://img.shields.io/github/actions/workflow/status/jarvis-xy/vibe-coding-sdd/installer-test.yml?branch=main&label=CI)](https://github.com/jarvis-xy/vibe-coding-sdd/actions)
-[![License](https://img.shields.io/github/license/jarvis-xy/vibe-coding-sdd)](LICENSE)
-[![Node](https://img.shields.io/badge/Node.js-18%2B-43853d?logo=node.js&logoColor=white)](package.json)
+[![STAR ON GITHUB](https://img.shields.io/github/stars/jarvis-xy/vibe-coding-sdd?style=for-the-badge&logo=github&label=STAR%20ON%20GITHUB)](https://github.com/jarvis-xy/vibe-coding-sdd/stargazers)
+[![VERSION](https://img.shields.io/badge/VERSION-v0.3.0-ff7a35?style=for-the-badge)](CHANGELOG.md)
+[![CI](https://img.shields.io/github/actions/workflow/status/jarvis-xy/vibe-coding-sdd/installer-test.yml?branch=main&style=for-the-badge&label=CI)](https://github.com/jarvis-xy/vibe-coding-sdd/actions)
+
+[![NODE](https://img.shields.io/badge/NODE-%3E%3D18-5FA04E?style=for-the-badge&logo=node.js&logoColor=white)](package.json)
+[![LICENSE](https://img.shields.io/github/license/jarvis-xy/vibe-coding-sdd?style=for-the-badge&label=LICENSE)](LICENSE)
+[![AGENTS](https://img.shields.io/badge/AGENTS-Antigravity%20%7C%20Claude%20Code%20%7C%20Codex%20%7C%20Kiro-5b5bd6?style=for-the-badge)](#支持的-coding-agent)
+
+<br/>
+
+### 让 AI Coding 从“能写代码”变成“按流程把产品真正做对”
+
+| 指标 | 普通 Vibe Coding | Vibe Coding SDD |
+| --- | --- | --- |
+| **需求定义** | 边聊边猜 | Spec 先定义“什么叫对” |
+| **复杂功能** | 一次性让 AI 大改 | Design → Tasks → Task-by-Task |
+| **Bug 修复** | 先 Patch 症状 | Reproduce → Evidence → Root Cause |
+| **质量控制** | AI 自己写、自己说完成 | Tests → Review → Browser QA |
+| **项目上下文** | 分散在多个对话里 | Global Rules + Project Context |
+| **完成标准** | 代码写完 / Build 成功 | Spec ↔ Implementation ↔ Tests ↔ Behavior |
+
+<br/>
+
+[![TRY IT](https://img.shields.io/badge/TRY%20IT-npx%20vibe--coding--sdd%20init-ef4444?style=for-the-badge)](#快速开始)
 
 </div>
 

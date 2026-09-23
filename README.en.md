@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src="assets/vibe-coding-sdd-banner.jpg" alt="Vibe Coding SDD — Spec-Driven Workflow for AI Coding Agents" width="100%" />
+
+</div>
+
 # Vibe Coding SDD
 
 **A tool-agnostic, Spec-Driven Development workflow for AI coding agents.**

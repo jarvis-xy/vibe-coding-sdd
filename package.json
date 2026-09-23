@@ -1,6 +1,6 @@
 {
   "name": "vibe-coding-sdd",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Tool-agnostic Spec-Driven Development workflow for AI coding agents.",
   "license": "MIT",
   "type": "commonjs",
@@ -11,7 +11,11 @@
     "node": ">=18"
   },
   "scripts": {
-    "test": "node test/installer.test.js"
+    "test": "node test/installer.test.js",
+    "prepublishOnly": "npm test"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "bin/",

@@ -21,7 +21,7 @@ npx --yes github:jarvis-xy/vibe-coding-sdd init
 The installer asks for:
 
 - coding agent: Antigravity / Claude Code / Codex / Kiro / Generic
-- scope: project / global
+- scope: **global (default/recommended)** / project (advanced opt-in)
 - rule language: English / 中文
 
 ### Non-interactive examples
@@ -32,16 +32,16 @@ Antigravity, global, Chinese rules:
 npx --yes github:jarvis-xy/vibe-coding-sdd init --agent antigravity --scope global --lang zh-CN --yes
 ```
 
-Claude Code, current project:
+Claude Code, global:
 
 ```bash
-npx --yes github:jarvis-xy/vibe-coding-sdd init --agent claude-code --scope project --lang en --yes
+npx --yes github:jarvis-xy/vibe-coding-sdd init --agent claude-code --scope global --lang en --yes
 ```
 
-Codex, current project:
+Codex, global:
 
 ```bash
-npx --yes github:jarvis-xy/vibe-coding-sdd init --agent codex --scope project --lang en --yes
+npx --yes github:jarvis-xy/vibe-coding-sdd init --agent codex --scope global --lang en --yes
 ```
 
 Kiro, global:
@@ -49,6 +49,15 @@ Kiro, global:
 ```bash
 npx --yes github:jarvis-xy/vibe-coding-sdd init --agent kiro --scope global --lang en --yes
 ```
+
+## Recommended scope
+
+The repository's core is a reusable development methodology, so **Rules / Skills install globally by default**:
+
+> Global = how you develop.  
+> Project = what this product is.
+
+Project scope is an explicit advanced option for repository-local overrides. Before using it, `cd` into a real project directory. The installer refuses to treat your home directory as a project.
 
 ## Safety behavior
 

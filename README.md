@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="assets/vibe-coding-sdd-banner.jpg" alt="Vibe Coding SDD — Spec-Driven Workflow for AI Coding Agents" width="100%" />
+<img src="https://raw.githubusercontent.com/jarvis-xy/vibe-coding-sdd/main/assets/vibe-coding-sdd-banner.jpg" alt="Vibe Coding SDD — Spec-Driven Workflow for AI Coding Agents" width="100%" />
 
 <br/>
 
-# 🧭 Vibe Coding SDD
+# Vibe Coding SDD
 
 ### 给 Claude Code、Codex、Antigravity、Kiro 和其他 AI Coding Agent 一套统一的 SDD 开发流程
 
